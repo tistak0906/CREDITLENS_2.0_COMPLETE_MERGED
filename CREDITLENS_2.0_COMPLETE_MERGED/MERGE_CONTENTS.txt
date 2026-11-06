@@ -1,0 +1,21 @@
+CREDITLENS 2.0 — COMPLETE MERGED BUILD
+
+This ZIP contains the complete previously updated CREDITLENS project plus the Loan Products board.
+
+Included existing modules and improvements:
+- Dashboard improvements
+- Customers, applications, loan portfolio and payments
+- Approval/rejection workflow and repayment schedule generation
+- Credit score educational estimator
+- Loan eligibility and EMI calculators
+- Risk analytics and risk records
+- Repayment schedule, overdue monitoring and notifications
+- Advanced reports and CSV export
+- New Loan Products catalogue
+
+Setup notes:
+- Copy server/.env from your existing working project. This archive intentionally excludes secrets.
+- Run npm install separately in server and client.
+- Keep existing ports: frontend 5173, backend 5000.
+- Keep your existing MySQL database; no SQL migration is needed for the Loan Products board. Do not rerun seed scripts on your populated database.
+- Loan-product interest ranges are illustrative demo values, not live bank offers.

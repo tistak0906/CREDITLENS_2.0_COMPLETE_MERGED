@@ -1,0 +1,43 @@
+CREDITLENS 2.0 COMPLETE MERGED BUILD — START HERE
+
+WHAT'S NEW
+1. Credit Score Calculator (educational index only; NOT a genuine CIBIL/bureau score).
+2. Loan Eligibility Calculator (editable FOIR affordability estimate).
+3. Repayment Schedule screen, backed by the existing LoanSchedules table. Approving a new application now creates its monthly EMI schedule rows automatically.
+4. Improved Risk Analytics using the latest assessment per customer.
+5. Notification Center for pending applications, overdue instalments, and instalments due in 7 days.
+6. Advanced Reports with CSV export and browser Print / Save PDF.
+7. Dashboard quick tools, six-month collection series, latest risk distribution, and portfolio indicators.
+8. Loan Products board with searchable sample product categories, illustrative annual interest ranges, typical tenures and eligibility notes.
+
+THIS IS THE COMPLETE MERGED PROJECT
+- This package combines the previously updated CREDITLENS project (all earlier modules and fixes) with the new Loan Products board. It is not a standalone feature patch.
+
+BEFORE RUNNING
+- This ZIP intentionally excludes server/.env because that file contains private local settings.
+- Copy server/.env from your old working CREDITLENS project into this project's server folder. Keep its contents private.
+- Keep your existing MySQL database. Do not drop, recreate, or reseed it.
+- No database migration is required for these changes, including the Loan Products board.
+- Existing ports are preserved: frontend 5173 and API 5000.
+
+INSTALL AND RUN
+- Open a terminal in server and run: npm install
+- Open a second terminal in client and run: npm install
+
+RUN
+Terminal 1:
+  cd server
+  npm run dev
+
+Terminal 2:
+  cd client
+  npm run dev
+
+CREDIT SCORE NOTE
+A real CIBIL / credit-bureau score requires an authorised bureau API arrangement and the organisation's approved integration credentials. This project does not fabricate a bureau score. The calculator is labelled as an educational profile index until authorised access is available.
+
+ACCURACY NOTE
+The EMI and eligibility calculations use deterministic formulas; the dashboard, risk summaries, schedule and reports aggregate database records. This is not proof of 70% predictive accuracy. To validate a predictive model, use a representative, consented dataset with verified repayment/default outcomes and an independent test set.
+
+LOAN PRODUCTS RATE NOTE
+- Loan product rates are illustrative frontend demo values, not live rates, official lender offers or guaranteed pricing. No live bank-rate API is connected. Update the catalogue only with verified lender information if the app is later used for real product comparisons.

@@ -1,0 +1,22 @@
+CREDITLENS 2.0 — LOAN PRODUCTS BOARD UPDATE
+
+WHAT'S NEW
+- Added a Loan Products item to the sidebar.
+- Added a searchable and filterable catalogue with Personal, Home, Education, Vehicle, Business and Gold loan categories.
+- Each card shows an illustrative annual interest-rate range, typical tenure, security type and general eligibility considerations.
+- The Start an application button opens the existing Applications page.
+
+IMPORTANT RATE DISCLAIMER
+The listed ranges are sample demonstration values configured in client/src/App.jsx. They are NOT current bank quotations, lender offers, guaranteed rates or personalised financial recommendations. No live lender-rate API is connected. Verify current rates and terms directly with a lender before relying on them.
+
+DATABASE AND PORTS
+- No MySQL schema or data changes are needed.
+- Do not rerun database/schema.sql or database/seed.sql on your populated database.
+- Existing ports remain frontend 5173 and backend 5000.
+- Keep your existing server/.env file private and copy it from your working project into the updated server folder if needed.
+
+FILES CHANGED
+- client/src/App.jsx
+- client/src/styles.css
+- README.md
+- START_HERE.txt

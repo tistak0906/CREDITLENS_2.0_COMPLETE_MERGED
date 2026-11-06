@@ -1,0 +1,3 @@
+import {Router} from 'express'; import bcrypt from 'bcryptjs'; import jwt from 'jsonwebtoken'; import db from './db.js';
+const r=Router();
+r.post('/login',async(req,res,next)=>{try{const{email,password}=req.body;if(!email||!password)return res.status(400).json({message:'Email and password required'});const [rows]=await db.query('SELECT * FROM users WHERE email=?',[email]);const u=rows[0];if(!u||!await bcrypt.compare(password,u.password_hash))return res.status(401).json({message:'Invalid email or password'});const token=jwt.sign({id:u.user_id,name:u.full_name,role:u.role},process.env.JWT_SECRET,{expiresIn:'8h'});res.json({token,user:{id:u.user_id,name:u.full_name,email:u.email,role:u.role}})}catch(e){next(e)}}); export default r;
